@@ -74,6 +74,7 @@ require (
 	cloud.google.com/go/storage v1.14.0 // indirect
 	github.com/Azure/azure-pipeline-go v0.2.2 // indirect
 	github.com/Azure/azure-storage-blob-go v0.9.0 // indirect
+	github.com/Eumeryx/goldmark-texlike v0.0.0-20220311064056-d4c738c3a4b0 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
 	github.com/dlclark/regexp2 v1.4.0 // indirect

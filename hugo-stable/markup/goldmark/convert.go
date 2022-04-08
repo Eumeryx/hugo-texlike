@@ -33,6 +33,7 @@ import (
 	"github.com/gohugoio/hugo/hugofs"
 	"github.com/gohugoio/hugo/markup/converter"
 	"github.com/gohugoio/hugo/markup/tableofcontents"
+	"github.com/gohugoio/hugo/markup/texlike"
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
@@ -102,6 +103,10 @@ func newMarkdown(pcfg converter.ProviderConfig) goldmark.Markdown {
 
 	if mcfg.Highlight.CodeFences {
 		extensions = append(extensions, codeblocks.New())
+	}
+
+	if mcfg.Texlike.Enable {
+		extensions = append(extensions, texlike.NewTexlike(mcfg.Texlike))
 	}
 
 	if cfg.Extensions.Table {

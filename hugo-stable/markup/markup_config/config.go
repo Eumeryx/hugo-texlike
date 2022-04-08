@@ -22,6 +22,7 @@ import (
 	"github.com/gohugoio/hugo/markup/goldmark/goldmark_config"
 	"github.com/gohugoio/hugo/markup/highlight"
 	"github.com/gohugoio/hugo/markup/tableofcontents"
+	"github.com/gohugoio/hugo/markup/texlike"
 	"github.com/gohugoio/hugo/parser"
 	"github.com/mitchellh/mapstructure"
 )
@@ -34,6 +35,7 @@ type Config struct {
 
 	Highlight       highlight.Config
 	TableOfContents tableofcontents.Config
+	Texlike         texlike.Config
 
 	// Content renderers
 	Goldmark    goldmark_config.Config
@@ -108,6 +110,7 @@ var Default = Config{
 
 	TableOfContents: tableofcontents.DefaultConfig,
 	Highlight:       highlight.DefaultConfig,
+	Texlike:         texlike.DefaultConfig,
 
 	Goldmark:    goldmark_config.Default,
 	BlackFriday: blackfriday_config.Default,
